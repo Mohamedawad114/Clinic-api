@@ -1,0 +1,1478 @@
+{
+	"info": {
+		"_postman_id": "42003b9a-91ae-4fe8-a9ce-8021386b1d12",
+		"name": "clinic",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "44460916"
+	},
+	"item": [
+		{
+			"name": "user services",
+			"item": [
+				{
+					"name": "reset password services",
+					"item": [
+						{
+							"name": "edit password req",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OGI3MWYyNGU4MTJmYjAzM2YyMWRlZSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTc1NDQyNjI2NSwiZXhwIjoxNzU0NDI5ODY1fQ.emHjjLqggvu3dGzLZFTlM9vek6SC3Er5O3dUoVwXtYU",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3000/users/reqresestpassword",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"users",
+										"reqresestpassword"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "edit password",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OGI3MWYyNGU4MTJmYjAzM2YyMWRlZSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTc1NDQyNjI2NSwiZXhwIjoxNzU0NDI5ODY1fQ.emHjjLqggvu3dGzLZFTlM9vek6SC3Er5O3dUoVwXtYU",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"OTP\":\"n7ajmd\",\r\n    \"newPassword\":\"mo.awad4444\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/users/editpassword",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"users",
+										"editpassword"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "admin services",
+					"item": [
+						{
+							"name": "search user",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OGI3MWYyNGU4MTJmYjAzM2YyMWRlZSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTc1NDE1MjE3OCwiZXhwIjoxNzU0MTU1Nzc4fQ.Alo4cMJdO5PJpC2CkErLxBCgEF8WxH7nqPvIvz_ZrFU",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"firstName\":\"mohamed\",\n    \"lastName\":\"Awad\",\n  \"email\": \"mohamedahmedawad180@gmail.com\",\n  \"password\": \"mo.awad4444\",\n  \"age\":20,\n  \"isAdmin\":true,\n  \"gender\":\"male\",\n  \"phone\":\"01016624425\"\n}\n"
+								},
+								"url": {
+									"raw": "http://localhost:3000/users/searchuser/688e3c0057ef65750f313f51",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"users",
+										"searchuser",
+										"688e3c0057ef65750f313f51"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "usersData",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OGI3MWYyNGU4MTJmYjAzM2YyMWRlZSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTc1NDQxMjEwNCwiZXhwIjoxNzU0NDE1NzA0fQ._X9UgHv7N5m-o6ZH71otFLbD98VkIc4JnM8WGqeB-8s",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"firstName\":\"mohamed\",\n    \"lastName\":\"Awad\",\n  \"email\": \"mohamedahmedawad180@gmail.com\",\n  \"password\": \"mo.awad4444\",\n  \"age\":20,\n  \"isAdmin\":true,\n  \"gender\":\"male\",\n  \"phone\":\"01016624425\"\n}\n"
+								},
+								"url": {
+									"raw": "http://localhost:3000/users/usersdata",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"users",
+										"usersdata"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete account",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OGI3MWYyNGU4MTJmYjAzM2YyMWRlZSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTc1NDQxMjEwNCwiZXhwIjoxNzU0NDE1NzA0fQ._X9UgHv7N5m-o6ZH71otFLbD98VkIc4JnM8WGqeB-8s",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n   \"id\":\"688b6a791c9494ec531d9f55\" \n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/users/deleteuser/689232e61d26e181af83d08c",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"users",
+										"deleteuser",
+										"689232e61d26e181af83d08c"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"firstName\":\"mohamed\",\n    \"lastName\":\"Awad\",\n  \"email\": \"mohamedahmedawad180@gmail.com\",\n  \"password\": \"mo.awad4444\",\n  \"age\":20,\n  \"isAdmin\":true,\n  \"gender\":\"male\",\n  \"phone\":\"01016624425\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/users/signup",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "confrim account",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"mohamedahmedawad180@gmail.com\",\n  \"OTP\": \"s7v5sc\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/users/confirmemail",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"confirmemail"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "refresh token",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "log out",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "aut",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\":\"user1@gmail.com\",\n    \"password\":\"12345678\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/users/logout",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update account",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OGI3MWYyNGU4MTJmYjAzM2YyMWRlZSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTc1NDQxMjEwNCwiZXhwIjoxNzU0NDE1NzA0fQ._X9UgHv7N5m-o6ZH71otFLbD98VkIc4JnM8WGqeB-8s",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"lastName\":\"AWad\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/users/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete account",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OGI2ZmYwNmM4NmI2ODg3ZTM0YjhhMSIsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE3NTM5NjkwNTgsImV4cCI6MTc1Mzk3MDg1OH0.rrGEoYFJ7Hp3gF29f7kY3swC6ZG9CwGAc1ENVUN4iNo",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n   \"id\":\"688b6a791c9494ec531d9f55\" \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/users/delete",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user profile",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OGI3MWYyNGU4MTJmYjAzM2YyMWRlZSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTc1NDQxMjEwNCwiZXhwIjoxNzU0NDE1NzA0fQ._X9UgHv7N5m-o6ZH71otFLbD98VkIc4JnM8WGqeB-8s",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n    \"name\": \"User6\",\r\n    \"user_name\": \"user_6\",\r\n    \"email\": \"user6@example.com\",\r\n    \"password\": \"password123\",\r\n    \"isAdmin\": false\r\n  }"
+						},
+						"url": {
+							"raw": "http://localhost:3000/users/profile",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update password",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OGI3MWYyNGU4MTJmYjAzM2YyMWRlZSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTc1NDQxMjEwNCwiZXhwIjoxNzU0NDE1NzA0fQ._X9UgHv7N5m-o6ZH71otFLbD98VkIc4JnM8WGqeB-8s",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"oldPassword\":\"mo.awad4444\",\r\n    \"newPassword\":\"Mo.awad4444\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/users/updatepassword",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"updatepassword"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "reviews services",
+			"item": [
+				{
+					"name": "add review",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OGUzYzAwNTdlZjY1NzUwZjMxM2Y1MSIsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE3NTQxNTI4NDYsImV4cCI6MTc1NDE1NjQ0Nn0.tJSBRT-q79RH0yiU_FUnVyijIbh3uWkKM5FROxtknDo",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"stars\":5,\n\"content\":\"good\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/reviews/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"reviews",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete review (user)",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OGUzYzAwNTdlZjY1NzUwZjMxM2Y1MSIsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE3NTQxNTI4NDYsImV4cCI6MTc1NDE1NjQ0Nn0.tJSBRT-q79RH0yiU_FUnVyijIbh3uWkKM5FROxtknDo",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"firstName\":\"mohamed\",\n    \"lastName\":\"Awad\",\n  \"email\": \"mohamedahmedawad180@gmail.com\",\n  \"password\": \"mo.awad4444\",\n  \"age\":20,\n  \"isAdmin\":true,\n  \"gender\":\"male\",\n  \"phone\":\"01016624425\"\n}\n"
+						},
+						"url": {
+							"raw": "http://localhost:3000/reviews/688e40fa3e779babd9b56b2a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"reviews",
+								"688e40fa3e779babd9b56b2a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete review (admin)",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OGI3MWYyNGU4MTJmYjAzM2YyMWRlZSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTc1NDQyNjI2NSwiZXhwIjoxNzU0NDI5ODY1fQ.emHjjLqggvu3dGzLZFTlM9vek6SC3Er5O3dUoVwXtYU",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/reviews/admin/688e437403ddfd96476816e1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"reviews",
+								"admin",
+								"688e437403ddfd96476816e1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "all review",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OGI3MWYyNGU4MTJmYjAzM2YyMWRlZSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTc1NDE1MzQ2MiwiZXhwIjoxNzU0MTU3MDYyfQ.89spU8vvS-HoSF9_t7z-XHdNfYzvKwhyelCW2v_hVCo",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/reviews/allreviews",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"reviews",
+								"allreviews"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "doctor services",
+			"item": [
+				{
+					"name": "doctor services (user)",
+					"item": [
+						{
+							"name": "doctors Info",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OGI3MWYyNGU4MTJmYjAzM2YyMWRlZSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTc1NDE2ODM2NCwiZXhwIjoxNzU0MTcxOTY0fQ.ALD4oLfU2lO2lolaAUiHSHcU5cUC2pTTEKus6b8RGlY",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3000/doctors/doctorsInformation",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"doctors",
+										"doctorsInformation"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "add doctor",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OGI3MWYyNGU4MTJmYjAzM2YyMWRlZSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTc1NDE2ODM2NCwiZXhwIjoxNzU0MTcxOTY0fQ.ALD4oLfU2lO2lolaAUiHSHcU5cUC2pTTEKus6b8RGlY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"firstName\": \"Ahmed\",\n  \"lastName\": \"Salem\",\n  \"phone\": \"01234567890\",\n  \"email\": \"ahmed.salem@gmail.com\",\n  \"age\": 40,\n  \"Bio\": \"Consultant Cardiologist with 15+ years of experience.\",\n  \"gender\": \"male\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/doctors/adddoctor",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"doctors",
+								"adddoctor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "upload photo",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OGI3MWYyNGU4MTJmYjAzM2YyMWRlZSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTc1NDE2ODM2NCwiZXhwIjoxNzU0MTcxOTY0fQ.ALD4oLfU2lO2lolaAUiHSHcU5cUC2pTTEKus6b8RGlY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "postman-cloud:///1f06fe4a-4b97-46d0-bccd-1bdeda255921"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/doctors/688e7d14dc75a77b84ff849c/doctorphoto",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"doctors",
+								"688e7d14dc75a77b84ff849c",
+								"doctorphoto"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "edit doctor",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OGI3MWYyNGU4MTJmYjAzM2YyMWRlZSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTc1NDQxMjEwNCwiZXhwIjoxNzU0NDE1NzA0fQ._X9UgHv7N5m-o6ZH71otFLbD98VkIc4JnM8WGqeB-8s",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Bio\":\"iam always on the top\",\r\n    \"lastName\":\"sabry\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/doctors/68923b518ef831a3a2cd9131/editdoctor",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"doctors",
+								"68923b518ef831a3a2cd9131",
+								"editdoctor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete doctor",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OGI3MWYyNGU4MTJmYjAzM2YyMWRlZSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTc1NDQyNjI2NSwiZXhwIjoxNzU0NDI5ODY1fQ.emHjjLqggvu3dGzLZFTlM9vek6SC3Er5O3dUoVwXtYU",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/doctors/delete/68923b518ef831a3a2cd9131",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"doctors",
+								"delete",
+								"68923b518ef831a3a2cd9131"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "doctors data",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OGI3MWYyNGU4MTJmYjAzM2YyMWRlZSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTc1NDE2ODM2NCwiZXhwIjoxNzU0MTcxOTY0fQ.ALD4oLfU2lO2lolaAUiHSHcU5cUC2pTTEKus6b8RGlY",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/doctors/doctorsdata",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"doctors",
+								"doctorsdata"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete photo",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OGI3MWYyNGU4MTJmYjAzM2YyMWRlZSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTc1NDE2ODM2NCwiZXhwIjoxNzU0MTcxOTY0fQ.ALD4oLfU2lO2lolaAUiHSHcU5cUC2pTTEKus6b8RGlY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "postman-cloud:///1f06fe4a-4b97-46d0-bccd-1bdeda255921"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/doctors/688e7d14dc75a77b84ff849c/photo",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"doctors",
+								"688e7d14dc75a77b84ff849c",
+								"photo"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "advice services",
+			"item": [
+				{
+					"name": "advice srvices user",
+					"item": [
+						{
+							"name": "all advices",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OGI3MWYyNGU4MTJmYjAzM2YyMWRlZSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTc1NDI1NzcwMCwiZXhwIjoxNzU0MjYxMzAwfQ.4Y_h-t3LQDGEuLo0O1kuVIxZLseTXb5q1LyMS78C3XA",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3000/advices/alladvices",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"advices",
+										"alladvices"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "add advice",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OGI3MWYyNGU4MTJmYjAzM2YyMWRlZSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTc1NDI0MDM4OSwiZXhwIjoxNzU0MjQzOTg5fQ.SL4LG5I7kDhSmLL3PWDTubF5xmH_BvyWXvqlkdhJhiY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"content\": \"قم بتنظيف أسنانك مرتين يومياً للحفاظ على صحة الفم.\",\r\n  \"doctorId\": \"688f94de6f1eed58324bb7f2\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/advices/addadvice",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"advices",
+								"addadvice"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update advice",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OGI3MWYyNGU4MTJmYjAzM2YyMWRlZSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTc1NDI0MDM4OSwiZXhwIjoxNzU0MjQzOTg5fQ.SL4LG5I7kDhSmLL3PWDTubF5xmH_BvyWXvqlkdhJhiY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"content\": \"قم بتنظيف أسنانك مره يومياً للحفاظ على صحة الفم.\",\r\n  \"doctorId\": \"688f94de6f1eed58324bb7f2\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/advices/editadvice/688f95a06f1eed58324bb7f5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"advices",
+								"editadvice",
+								"688f95a06f1eed58324bb7f5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add photos",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OGI3MWYyNGU4MTJmYjAzM2YyMWRlZSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTc1NDI0MTgwMiwiZXhwIjoxNzU0MjQ1NDAyfQ.5ygJYnSASCCLbw5YIftxzB6__XFQmIYD1Ncotzr0Zj0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "images",
+									"type": "file",
+									"src": [
+										"postman-cloud:///1f064151-cce2-4c50-a7d5-6413cef7b4ae",
+										"postman-cloud:///1f064123-bd5e-4d70-91d3-f7631781e6b2"
+									]
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/advices/addphoto/688f95a06f1eed58324bb7f5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"advices",
+								"addphoto",
+								"688f95a06f1eed58324bb7f5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete photo",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OGI3MWYyNGU4MTJmYjAzM2YyMWRlZSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTc1NDI1Mzc1MiwiZXhwIjoxNzU0MjU3MzUyfQ.5Jiu77sGd9p53RmRrR-aCbiT5SQWpOPph6HyBLWGS5k",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "images",
+									"type": "file",
+									"src": [
+										"postman-cloud:///1f064151-cce2-4c50-a7d5-6413cef7b4ae",
+										"postman-cloud:///1f064123-bd5e-4d70-91d3-f7631781e6b2"
+									]
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/advices/688f95a06f1eed58324bb7f5/deletephoto?public_id=advices folder/qgzmqobexuoc1v0kcels",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"advices",
+								"688f95a06f1eed58324bb7f5",
+								"deletephoto"
+							],
+							"query": [
+								{
+									"key": "public_id",
+									"value": "advices folder/qgzmqobexuoc1v0kcels"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete advice",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OGI3MWYyNGU4MTJmYjAzM2YyMWRlZSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTc1NDI1NzcwMCwiZXhwIjoxNzU0MjYxMzAwfQ.4Y_h-t3LQDGEuLo0O1kuVIxZLseTXb5q1LyMS78C3XA",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/advices/delete/688f95a06f1eed58324bb7f5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"advices",
+								"delete",
+								"688f95a06f1eed58324bb7f5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "advices data",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OGI3MWYyNGU4MTJmYjAzM2YyMWRlZSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTc1NDI1NzcwMCwiZXhwIjoxNzU0MjYxMzAwfQ.4Y_h-t3LQDGEuLo0O1kuVIxZLseTXb5q1LyMS78C3XA",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/advices/allData",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"advices",
+								"allData"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "clinic services",
+			"item": [
+				{
+					"name": "add information",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OGI3MWYyNGU4MTJmYjAzM2YyMWRlZSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTc1NDIzMjU2MywiZXhwIjoxNzU0MjM2MTYzfQ.fBQFRRbhuw4w9XHQ5nR00mQIdTzL4uDTmlZzNulUdpw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"address\": \"15 شارع التحرير، الجيزة\",\n  \"phone\": \"+201234567890\",\n  \"aboutUs\": \"عيادة متخصصة في طب الأسنان نقدم أفضل الخدمات.\",\n  \"working_Hours\": \"من 9 صباحاً إلى 9 مساءً\",\n  \"email\": \"clinic@example.com\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/clinic/clinicInfo",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"clinic",
+								"clinicInfo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "clinic photo",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OGI3MWYyNGU4MTJmYjAzM2YyMWRlZSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTc1NDIzNjQ4NSwiZXhwIjoxNzU0MjQwMDg1fQ.kgHwwcpfXhefHr2LHXpaYZwn2dDHs19wGmy4ZZCPSz8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "images",
+									"type": "file",
+									"src": [
+										"postman-cloud:///1f064151-cce2-4c50-a7d5-6413cef7b4ae",
+										"postman-cloud:///1f061721-3a8c-4900-ba4e-08989930150b",
+										"postman-cloud:///1f061779-c29e-4840-a6ea-baa951322982"
+									]
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/clinic/clinicphotos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"clinic",
+								"clinicphotos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update clinic",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OGI3MWYyNGU4MTJmYjAzM2YyMWRlZSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTc1NDIzMjU2MywiZXhwIjoxNzU0MjM2MTYzfQ.fBQFRRbhuw4w9XHQ5nR00mQIdTzL4uDTmlZzNulUdpw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"address\": \"20 شارع النيل، القاهرة\",\n  \"phone\": \"+201122334455\",\n  \"aboutUs\": \"تم تحديث بيانات العيادة لتقديم خدمات جديدة.\",\n  \"working_Hours\": \"من 10 صباحاً إلى 8 مساءً\",\n  \"email\": \"newclinic@example.com\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/clinic/editclinicInfo",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"clinic",
+								"editclinicInfo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete photo",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OGI3MWYyNGU4MTJmYjAzM2YyMWRlZSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTc1NDIzNjQ4NSwiZXhwIjoxNzU0MjQwMDg1fQ.kgHwwcpfXhefHr2LHXpaYZwn2dDHs19wGmy4ZZCPSz8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/clinic/deletephoto?public_id=clinic_folder/gzafxk26xbctgjhlkqwx",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"clinic",
+								"deletephoto"
+							],
+							"query": [
+								{
+									"key": "public_id",
+									"value": "clinic_folder/gzafxk26xbctgjhlkqwx"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete clinic info",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OGI3MWYyNGU4MTJmYjAzM2YyMWRlZSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTc1NDIzNzg5MiwiZXhwIjoxNzU0MjQxNDkyfQ.gsJI1o9pExBj_bY7mSoQjx0FH0dl4cVWUn4muFf5LQg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"firstName\": \"Ahmed\",\n  \"lastName\": \"Salem\",\n  \"phone\": \"01234567890\",\n  \"email\": \"ahmed.salem@gmail.com\",\n  \"age\": 40,\n  \"Bio\": \"Consultant Cardiologist with 15+ years of experience.\",\n  \"gender\": \"male\"\n}\n"
+						},
+						"url": {
+							"raw": "http://localhost:3000/clinic/deleteinformation",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"clinic",
+								"deleteinformation"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "clinic info",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OGI3MWYyNGU4MTJmYjAzM2YyMWRlZSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTc1NDE2ODM2NCwiZXhwIjoxNzU0MTcxOTY0fQ.ALD4oLfU2lO2lolaAUiHSHcU5cUC2pTTEKus6b8RGlY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"firstName\": \"Ahmed\",\n  \"lastName\": \"Salem\",\n  \"phone\": \"01234567890\",\n  \"email\": \"ahmed.salem@gmail.com\",\n  \"age\": 40,\n  \"Bio\": \"Consultant Cardiologist with 15+ years of experience.\",\n  \"gender\": \"male\"\n}\n"
+						},
+						"url": {
+							"raw": "http://localhost:3000/clinic/clinicInfo",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"clinic",
+								"clinicInfo"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Book services",
+			"item": [
+				{
+					"name": "user services",
+					"item": [
+						{
+							"name": "set book",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OGI3MWYyNGU4MTJmYjAzM2YyMWRlZSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTc1NDQyNDQ4MSwiZXhwIjoxNzU0NDI4MDgxfQ.MjjMA5hGbsBtayVzv7c5qccgLwBAF7bfKbZNzHahRqw",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"fullName\": \"nour Ahmed\",\n  \"phone\": \"01016624425\",\n  \"age\": 22,\n  \"date\":\"2025-08-7\",\n  \"Comment\": \"حشو\"\n}\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/Books/setBook",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"Books",
+										"setBook"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "upload photo",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OGI3MWYyNGU4MTJmYjAzM2YyMWRlZSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTc1NDQyNDQ4MSwiZXhwIjoxNzU0NDI4MDgxfQ.MjjMA5hGbsBtayVzv7c5qccgLwBAF7bfKbZNzHahRqw",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "images",
+											"type": "file",
+											"src": [
+												"postman-cloud:///1f06fe4a-4b97-46d0-bccd-1bdeda255921",
+												"postman-cloud:///1f061721-3a8c-4900-ba4e-08989930150b"
+											]
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3000/Books/6892665e4108fcc69e06a273/photos",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"Books",
+										"6892665e4108fcc69e06a273",
+										"photos"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "user bookings",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OGI3MWYyNGU4MTJmYjAzM2YyMWRlZSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTc1NDQyNDQ4MSwiZXhwIjoxNzU0NDI4MDgxfQ.MjjMA5hGbsBtayVzv7c5qccgLwBAF7bfKbZNzHahRqw",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"fullName\": \"nour Ahmed\",\n  \"phone\": \"01016624425\",\n  \"age\": 22,\n  \"date\":\"2025-08-18\",\n  \"Comment\": \"حشو\"\n}\n"
+								},
+								"url": {
+									"raw": "http://localhost:3000/Books/userbookings",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"Books",
+										"userbookings"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "cancle booking",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OGI3MWYyNGU4MTJmYjAzM2YyMWRlZSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTc1NDQyNDQ4MSwiZXhwIjoxNzU0NDI4MDgxfQ.MjjMA5hGbsBtayVzv7c5qccgLwBAF7bfKbZNzHahRqw",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"fullName\": \"nour Ahmed\",\n  \"phone\": \"01016624425\",\n  \"age\": 22,\n  \"date\":\"2025-08-18\",\n  \"Comment\": \"حشو\"\n}\n"
+								},
+								"url": {
+									"raw": "http://localhost:3000/Books/68926742c4a3f708b68ed6a3/cancel",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"Books",
+										"68926742c4a3f708b68ed6a3",
+										"cancel"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "all bookings",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OGI3MWYyNGU4MTJmYjAzM2YyMWRlZSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTc1NDQyNjI2NSwiZXhwIjoxNzU0NDI5ODY1fQ.emHjjLqggvu3dGzLZFTlM9vek6SC3Er5O3dUoVwXtYU",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/Books/allbookings?name=yousef Ahmed",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"Books",
+								"allbookings"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "yousef Ahmed"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "monthly booking",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OGI3MWYyNGU4MTJmYjAzM2YyMWRlZSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTc1NDQxMjEwNCwiZXhwIjoxNzU0NDE1NzA0fQ._X9UgHv7N5m-o6ZH71otFLbD98VkIc4JnM8WGqeB-8s",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/Books/bookingsmonth",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"Books",
+								"bookingsmonth"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "daily booking",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OGI3MWYyNGU4MTJmYjAzM2YyMWRlZSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTc1NDQyNjI2NSwiZXhwIjoxNzU0NDI5ODY1fQ.emHjjLqggvu3dGzLZFTlM9vek6SC3Er5O3dUoVwXtYU",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/Books/bookingsDay",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"Books",
+								"bookingsDay"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
